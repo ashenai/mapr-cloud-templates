@@ -282,7 +282,7 @@
             "osType": "Linux",
             "name": "[concat(parameters('maprosDiskName'), '0')]",
             "managedDisk": {
-              "storageAccountType": "[parameters('diskType')]"
+              "storageAccountType": "Premium_LRS"
             }
           },
           "dataDisks": "[take(variables('diskArray'), parameters('diskCount'))]"
@@ -367,7 +367,7 @@
             "osType": "Linux",
             "name": "[concat(parameters('maprosDiskName'), add(copyIndex(), 1))]",
             "managedDisk": {
-              "storageAccountType": "[parameters('diskType')]"
+              "storageAccountType": "Premium_LRS"
             }
           },
           "dataDisks": "[take(variables('diskArray'), parameters('diskCount'))]"
